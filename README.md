@@ -1,3 +1,3 @@
-# Kotlin_Resp_API
+# Kotlin_Rest_API
 
 ./mvnw spring-boot:run
