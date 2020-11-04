@@ -1,3 +1,5 @@
 package ru.study.hello_world
 
-data class HelloWorld(val id: Long, val content: String)
+import java.util.concurrent.atomic.AtomicLong
+
+data class HelloWorld(val id: AtomicLong, val content: String)
