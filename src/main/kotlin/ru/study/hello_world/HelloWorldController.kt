@@ -8,11 +8,12 @@ import java.util.concurrent.atomic.AtomicLong
 
 @RestController
 class HelloWorldController {
+    var counter = AtomicLong();
 
     @GetMapping("/hello")
     fun hello(
             @RequestParam(value = "name", defaultValue = "World") name : String
-    ) = HelloWorld( AtomicLong() , "Hello, $name!")
+    ) = HelloWorld(counter.getAndIncrement(), "Hello, $name!")
 
 
 }
